@@ -84,5 +84,9 @@ and to get full xml as JSON, just pass empty value in path i.e.:
 }
 ```
 
+# Security
+
+To prevent unauthorised people from updating the xml, we protected it by storing password in the linux/macos keyring.
+
 
 
