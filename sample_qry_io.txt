@@ -1,6 +1,6 @@
 to run (uses nightly):
 
-cargo run --package stj --bin stj -- -p <foo>/pw.txt -d <foo>
+    cargo run --package stj --bin stj -- -p <foo>/pw.txt -d <foo>
 
 where foo is some path to directory.
 
