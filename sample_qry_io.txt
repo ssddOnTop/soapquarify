@@ -1,0 +1,25 @@
+to run (uses nightly):
+
+cargo run --package stj --bin stj -- -p <foo>/pw.txt -d <foo>
+
+where foo is some path to directory.
+
+Client side:
+
+to update value in db:
+
+
+{
+  "id": "xml",
+  "pw": "tmppw",
+  "value": "<?xml version = \"1.0\"?>\n<SOAP-ENV:Envelope\n        xmlns:SOAP-ENV = \"http://www.w3.org/2001/12/soap-envelope\"\n        SOAP-ENV:encodingStyle = \"http://www.w3.org/2001/12/soap-encoding\">\n\n  <SOAP-ENV:Body xmlns:m = \"http://www.xyz.org/quotations\">\n    <m:GetQuotation>\n      <m:QuotationsName>MiscroSoft</m:QuotationsName>\n    </m:GetQuotation>\n  </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+}
+
+to get value at some specific location:
+or to get whole xml as json, just pass empty value in path i.e. "path": ""
+
+{
+  "id": "qry",
+  "path": "Body/GetQuotation/QuotationsName/$value"
+}
+
